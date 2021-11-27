@@ -1,4 +1,4 @@
-# debounce-react-hooks
+# debounce-throttle-react-hooks
 
 手动实现 react hooks 的防抖节流
 
