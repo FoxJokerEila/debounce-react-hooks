@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>防抖 节流</title>
+  <script src="./utils/debounce.js"></script>
+  <script src="./utils/throttle.js"></script>
+</head>
+
+<body>
+  <button id="debounce">防抖按钮</button>
+  <button id="throttle">节流按钮</button>
+  <script>
+    const debbtn = document.getElementById("debounce")
+    const thrbtn = document.getElementById("throttle")
+    debbtn.addEventListener('click', debounce(real, 500))
+    thrbtn.addEventListener('click', throttle(real, 500))
+    function real() {
+      console.log('I was clicked.');
+    }
+  </script>
+</body>
+
+</html>
