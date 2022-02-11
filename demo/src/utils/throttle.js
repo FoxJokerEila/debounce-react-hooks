@@ -6,8 +6,8 @@ function useThrottle(func, delay, deps = []) {
     current.now = new Date().getTime()
     if (current.now - current.bef > delay) {
       current.func.call(this, ...arguments)
+      current.bef = current.now
     }
-    current.bef = current.now
   }, deps)
 }
 
